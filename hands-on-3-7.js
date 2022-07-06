@@ -1,4 +1,3 @@
-
 /**
  * Practice: Building objects
  *
@@ -24,3 +23,5 @@ const makeupBag = {
         this.makeUps.lipStick = Mac;
     },
 };
+
+// console.log(makeupBag.bagSize);
