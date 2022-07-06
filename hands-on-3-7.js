@@ -18,7 +18,7 @@ const makeupBag = {
         length: 15,
         diameter: 6,
     },
-    newMakeUps: function(makeUp) {
+    newMakeUps(makeUp) {
         this.makeUps.mascara = Mabline;
         this.makeUps.lipStick = Mac;
     },
