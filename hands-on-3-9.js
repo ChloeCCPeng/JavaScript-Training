@@ -1,4 +1,3 @@
-
 /**
  * Practice: Making methods
  *
@@ -24,4 +23,15 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  newColor(backPackColor) {
+    this.color = backPackColor;
+  },
+  newPocketNum(pktNum) {
+    this.pocketNum = pktNum;
+  }
 };
+
+backpack.newColor('red');
+backpack.newPocketNum(20)
+console.log(backpack.color)
+console.log(backpack.pocketNum)
