@@ -1,4 +1,3 @@
-
 /**
  * Practice: Making classes and objects
  *
@@ -22,12 +21,13 @@ function Human (names, eyesL, eyesR, handsL, handsR, legsL, legsR, race, height,
         right: legsR,
     };
     this.race = race;
-
-    this.height = function (heightRan) {
-        this.height = heightRan;
+    this.height = height;
+    this.randomHeight = function () {
+        this.height = height.Math.random()*200;
     };
-    this.weight = function (weightRan) {
-        this.weight = weightRan;
+    this.weight = weight;
+    this.randomWeight = function () {
+        this.weight = Math.floor(Math.random()*100);
     }
 }
 
