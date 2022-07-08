@@ -20,12 +20,19 @@ console.log(array)
 let arraySort = array.sort();
 console.log(array)
 
-let found = array.find (function (item) {
+let found = array.find(function (item) {
     console.log (item.length > 5)
 })
 //true
 //false
 //true
+
+let foundLast = array.find(function (item) {
+    array.pop(item.length > 5)
+    console.log(array)
+})
+//['hairtie', 'pen', 'remote']
+//['hairtie', 'pen']
 
 // array.forEach(function(item) {
 //     if(item.length > 5) {
