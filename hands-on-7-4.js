@@ -9,30 +9,25 @@
  */
 
 
-let array = ['pen', 'waterBottle', 'remote', 'hairtie'];
+const array = ['pen', 'waterBottle', 'remote', 'hairtie'];
+console.log(array);
 
-let arrayRemove = array.pop();
+array.pop();
 console.log(array)
 
-let arrayAdd = array.unshift('hairtie')
+array.unshift(array.pop())
 console.log(array)
 
-let arraySort = array.sort();
+array.sort();
 console.log(array)
 
-let found = array.find(function (item) {
-    console.log (item.length > 5)
-})
-//true
-//false
-//true
-
-let foundLast = array.find(function (item) {
-    array.pop(item.length > 5)
-    console.log(array)
-})
-//['hairtie', 'pen', 'remote']
-//['hairtie', 'pen']
+let found = array.find((item) => item.length > 5)
+    console.log (found)
+    //remote
+    
+let remove = 'hairtie';
+array.splice(array.indexOf(remove), 1);
+console.log(array)
 
 // array.forEach(function(item) {
 //     if(item.length > 5) {
