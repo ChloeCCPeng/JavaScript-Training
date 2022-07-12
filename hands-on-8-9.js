@@ -1,4 +1,3 @@
-
 /**
  * Practice: Pass values between functions
  *
@@ -59,7 +58,15 @@ const content = `
     </ul>  
 `;
 
-const addFigure = (figure) => {
-  let figure = document.createElement("div");
-  
+
+// * Create two functions:
+// * - Main function
+// *  - Creates new <article> element
+// *  - Populates <article> with content (see const content below)
+// *  - Returns <article> element to where function is called
+
+const newArticle = (content) => {
+  let article = document.createElement('article')
+  article.innerHTML = content;
+  article.appendChild()
 }
