@@ -58,15 +58,20 @@ const content = `
     </ul>  
 `;
 
-
-// * Create two functions:
-// * - Main function
-// *  - Creates new <article> element
-// *  - Populates <article> with content (see const content below)
-// *  - Returns <article> element to where function is called
-
-const newArticle = (content) => {
-  let article = document.createElement('article')
-  article.innerHTML = content;
-  article.appendChild()
+const newFigure = (backpack) => {
+  let figure = document.createElement('figure');
+  let img = document.createElement('img');
+  img.setAttribute('src', backpack.image);
+  img.setAttribute('alt', '');
+  figure.append(img)
+  return figure
 }
+
+const newArticle = (content, frogpack) => {
+  let article = document.createElement('article');
+  article.innerHTML = content;
+  article.prepend(newFigure(frogpack))
+  return article;
+}
+
+document.querySelector('main').append(newArticle(content, frogpack))
