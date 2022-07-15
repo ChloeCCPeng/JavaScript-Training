@@ -5,14 +5,22 @@
  * - Set the inner HTML of the article to the existing HTML output provided in const content.
  * - Append each backpack object to the <main> element.
  */
-import backpackObjectArray from "./components/data.js";
+import Backpack from "./components/Backpack.js";
 
-const backpackRender = backpackObjectArray.map((backpack) => {
-  let newBackpack = document.createElement('article')
-  newBackpack.classList.add("backpack");
-  newBackpack.setAttribute('id', backpack.id);
+const everydayPack = new Backpack(
+  "pack01",
+  "Everyday Backpack",
+  30,
+  "grey",
+  15,
+  26,
+  26,
+  false,
+  "December 5, 2018 15:00:00 PST",
+  "../assets/images/everyday.svg"
+);
 
-newBack.innerHTML = `
+const content = `
     <figure class="backpack__image">
       <img src=${everydayPack.image} alt="" />
     </figure>
@@ -38,11 +46,14 @@ newBack.innerHTML = `
         everydayPack.lidOpen ? "open" : "closed"
       }</span></li>
     </ul>
+  
 `;
-  return newBackpack;
-});
+
 const main = document.querySelector(".maincontent");
 
-backpackRender.forEach((backpack) => {
-  main.append(backpack)
-})
+const newArticle = document.createElement("article");
+newArticle.classList.add("backpack");
+newArticle.setAttribute("id", "everyday");
+newArticle.innerHTML = content;
+
+main.append(newArticle);
