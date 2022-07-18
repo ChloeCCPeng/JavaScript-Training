@@ -1,3 +1,3 @@
 # JavaScript Essential
- - Introduction
+ - Object
  - 
