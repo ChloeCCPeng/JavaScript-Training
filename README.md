@@ -5,3 +5,5 @@
  - Variable and data type
  - Arrays
 - Function and Methods
+- Events
+- Trouble Shooting and Validation
