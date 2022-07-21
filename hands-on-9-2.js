@@ -4,6 +4,7 @@
  */
 
 const container = document.querySelector(".container");
+const container2 = document.querySelector(".container2")
 const button = document.querySelector(".cta-button");
 const posX = document.querySelector(".posX span");
 const posY = document.querySelector(".posY span");
@@ -38,3 +39,11 @@ container.addEventListener(
   },
   false
 );
+
+container2.addEventListener("mouseenter", () => {
+  container2.classList.add('white')
+})
+
+container2.addEventListener('mouseleave', () => {
+  container2.classList.remove('white')
+})
