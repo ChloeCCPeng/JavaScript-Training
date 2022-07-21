@@ -8,14 +8,11 @@
 import backpackObjectArray from "./components/data.js";
 
 const content = backpackObjectArray.map((backpack) => {
-
-  let backpackArticle = document.createElement("article");
+  const backpackArticle = document.createElement("article");
   backpackArticle.classList.add('backpack');
 
-  backpackArticle.setAttribute('id', backpack.id);
-
-
-backpackArticle.innerHTML = `
+  backpackArticle.setAttribute("id", backpack.id);
+  backpackArticle.innerHTML =`
     <figure class="backpack__image">
       <img src=${backpack.image} alt="" />
     </figure>
@@ -41,14 +38,12 @@ backpackArticle.innerHTML = `
         backpack.lidOpen ? "open" : "closed"
       }</span></li>
     </ul>
-  
 `;
 
 return backpackArticle;
 })
-
 const main = document.querySelector(".maincontent");
 
 content.forEach((backpack) => {
-  main.append(backpack)
+  main.append(backpack);
 })
