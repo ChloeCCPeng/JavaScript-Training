@@ -1,4 +1,3 @@
-
 /**
  * Practice: Play with event listeners
  * - Use an event listener and CSS either inline or through an added class to draw a highlight around the entire grid when you hover over it with your mouse.
@@ -16,3 +15,9 @@ gridContainer.addEventListener('mouseenter', () => {
 gridContainer.addEventListener('mouseleave', () => {
     gridContainer.style.outline = '';
 })
+
+const randColor = () => {
+    let hexColor = Math.floor(Math.random() * 16777215).toString(16);
+    return hexColor;
+}
+
