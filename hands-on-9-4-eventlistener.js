@@ -40,4 +40,12 @@ gridCells.forEach((cell) => {
             cell.style.backgroundColor = `#${randColor()}`;
         }
     })
+
+    cell.addEventListener('pointerover', () => {
+        cell.style.outline = "2px solid grey"
+    })
+
+    cell.addEventListener('pointerleave', () => {
+        cell.style.outline = ""
+    })
 })
