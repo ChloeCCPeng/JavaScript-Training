@@ -9,7 +9,7 @@
 const gridContainer = document.querySelector('.grid');
 
 gridContainer.addEventListener('mouseenter', () => {
-    gridContainer.style.outline = '10px solid pink'
+    gridContainer.style.outline = '10px double pink'
 });
 
 gridContainer.addEventListener('mouseleave', () => {
@@ -26,9 +26,17 @@ const gridCells = document.querySelectorAll('.cell');
 gridCells.forEach((cell) => {
 
     cell.addEventListener('click', () => {
+        if (cell.style.outline) {
+            cell.style.outline = '';
+        } else {
+            cell.style.outline = `4px dotted #${randColor()}`;
+        }
+    })
+
+    cell.addEventListener('click', () => {
         if (cell.style.backgroundColor) {
             cell.style.backgroundColor = '';
-        } else {
+        } else {       
             cell.style.backgroundColor = `#${randColor()}`;
         }
     })
