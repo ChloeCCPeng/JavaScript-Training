@@ -13,3 +13,4 @@ console.log(secondLi)
 secondLi.innerHTML = "Poo"
 
 document.querySelector('ul li').classList.add("newLi")
+// document.querySelector('main li:first-child').classList.add("newLi")
