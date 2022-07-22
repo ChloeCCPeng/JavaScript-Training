@@ -21,3 +21,15 @@ const randColor = () => {
     return hexColor;
 }
 
+const gridCells = document.querySelectorAll('.cell');
+
+gridCells.forEach((cell) => {
+
+    cell.addEventListener('click', () => {
+        if (cell.style.backgroundColor) {
+            cell.style.backgroundColor = '';
+        } else {
+            cell.style.backgroundColor = `#${randColor()}`;
+        }
+    })
+})
