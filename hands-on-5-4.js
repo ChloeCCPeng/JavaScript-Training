@@ -11,3 +11,5 @@ console.log(h1.textContent)
 let secondLi = document.querySelectorAll("ul li")[1];
 console.log(secondLi)
 secondLi.innerHTML = "Poo"
+
+document.querySelector('ul li').classList.add("newLi")
