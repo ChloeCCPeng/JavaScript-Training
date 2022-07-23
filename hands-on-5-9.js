@@ -58,4 +58,4 @@ newArticle.innerHTML = content
 // main.prepend(newArticle);
 main.appendChild(newArticle);
 // main.append(newArticle);
-//append works on objects and strings and appendChild works only on objects
+//append works on objects and string of text and appendChild works only on objects
