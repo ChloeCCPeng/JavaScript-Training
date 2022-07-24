@@ -68,9 +68,9 @@ const navigation = `
 `
 
 const mainNav = document.createElement("nav");
-// mainNav.classList.add('main-navigation');
-// const navList = document.createElement('ul')
-const navList = document.createElement('nav')
+mainNav.classList.add('main-navigation');
+const navList = document.createElement('ul')
+// const navList = document.createElement('nav')
 navList.innerHTML = navigation;
 mainNav.append(navList)
 
