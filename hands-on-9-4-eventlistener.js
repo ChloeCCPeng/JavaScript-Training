@@ -7,8 +7,8 @@
  */
 
 const grid = document.querySelector('.grid');
-grid.addEventListener('mouseover', () => {
-    grid.style.outline = '3px solid pink'
+grid.addEventListener('mouseenter', () => {
+    grid.style.outline = '3px solid CornflowerBlue'
 })
 
 grid.addEventListener('mouseleave', () => {
@@ -16,6 +16,19 @@ grid.addEventListener('mouseleave', () => {
 })
 
 const randColor = () => {
-    let hexColor = Math.floor (Math.random() * 16777215).toString(16);
-    return hexColor
-}
+    let hexColor = Math.floor(Math.random() * 16777215).toString(16);
+    return hexColor;
+  };
+
+const cells = document.querySelectorAll('.cell')
+
+cells.forEach((cell) => {
+    cell.addEventListener('mouseenter', () => {
+        cell.style.outline = `1.5px dashed #${randColor()}`
+    })
+
+    cell.addEventListener('mouseleave', () => {
+        cell.style.outline = ""
+    })
+})
+
