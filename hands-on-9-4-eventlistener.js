@@ -30,5 +30,13 @@ cells.forEach((cell) => {
     cell.addEventListener('mouseleave', () => {
         cell.style.outline = ""
     })
+
+    cell.addEventListener('click', () => {
+        if (cell.style.background) {
+            cell.style.background = '';
+        } else {
+            cell.style.background = `#${randColor()}`
+        }
+    })
 })
 
