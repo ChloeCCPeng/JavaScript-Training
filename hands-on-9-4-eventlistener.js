@@ -16,5 +16,6 @@ grid.addEventListener('mouseleave', () => {
 })
 
 const randColor = () => {
-    let hexColor = Math.floor (Math.random() *)
+    let hexColor = Math.floor (Math.random() * 16777215).toString(16);
+    return hexColor
 }
