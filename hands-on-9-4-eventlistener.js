@@ -8,5 +8,13 @@
 
 const grid = document.querySelector('.grid');
 grid.addEventListener('mouseover', () => {
-    grid.style.outline = '6px solid pink'
+    grid.style.outline = '3px solid pink'
 })
+
+grid.addEventListener('mouseleave', () => {
+    grid.style.outline =''
+})
+
+const randColor = () => {
+    let hexColor = Math.floor (Math.random() *)
+}
