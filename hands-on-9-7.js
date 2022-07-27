@@ -1,5 +1,11 @@
 /**
  * Challenge: Create an event listener
+ * - Find the two elements with the .backpack__strap class.
+ * - Create a function to output the strap length form.
+ * - Iterate through each item with the .backpack__strap class.
+ * - Capture the value of the data-side attribute to indicate the strap side.
+ * - Create a form element.
+ * - Populate the form with an input and a submit button.
  * - Add event listener to each of the strap length forms.
  * - Update strap length value with value submitted from form.
  */
@@ -34,42 +40,6 @@ const lidToggle = function (event, button, newArg) {
     : (status.innerText = "closed");
 };
 
-/**
- * Strap length functionality
- */
-const newStrapLength = (strapArray) => {
-  // Loop through each element on the list
-  strapArray.forEach((listElement) => {
-    // Get what side we are working with
-    let side = listElement.getAttribute("data-side");
-
-    // Create a new form element
-    const lengthForm = document.createElement("form");
-    lengthForm.classList.add(`${side}length`);
-    
-    // Populate form with an input and a button
-    lengthForm.innerHTML = `
-    <input type="number" name="${side}Length" placeholder="New ${side} length">
-    <button>Update</button>
-    `;
-    
-    lengthForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-    })
-//     const update = document.querySelector('button')
-// update.addEventListener('submit', (e) => {
-//   // newStrapLength(strapArray)
-//   e.preventDefault();
-// })
-
-    // Add form to the end of the list element
-    listElement.append(lengthForm);
-  });
-};
-
-
-
-
 const backpackList = backpackObjectArray.map((backpack) => {
   let backpackArticle = document.createElement("article");
   backpackArticle.classList.add("backpack");
@@ -103,9 +73,6 @@ const backpackList = backpackObjectArray.map((backpack) => {
     </ul>
     <button class="lid-toggle">Open lid</button>
   `;
-
-  let strapLengths = backpackArticle.querySelectorAll(".backpack__strap");
-  newStrapLength(strapLengths);
 
   let button = backpackArticle.querySelector(".lid-toggle");
   let newArg = "The argument I want to pass to the callback function!";
