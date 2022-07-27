@@ -45,6 +45,12 @@ const newStrapLength = (strapArray) => {
     let side = listElement.getAttribute('data-side')
 
     const lengthForm = document.create("form")
+    lengthForm.classList.add(`${side}length`);
+
+    lengthForm.innerHTML = `
+    <input type='number' name="{side}Length" placeholder="New ${side} length'
+    <button> Update </button>
+    `;
   })
 }
 
