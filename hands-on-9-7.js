@@ -40,6 +40,14 @@ const lidToggle = function (event, button, newArg) {
     : (status.innerText = "closed");
 };
 
+const newStrapLength = (strapArray) => {
+  strapArray.forEach((listElement) => {
+    let side = listElement.getAttribute('data-side')
+
+    const lengthForm = document.create("form")
+  })
+}
+
 const backpackList = backpackObjectArray.map((backpack) => {
   let backpackArticle = document.createElement("article");
   backpackArticle.classList.add("backpack");
