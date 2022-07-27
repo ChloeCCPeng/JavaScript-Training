@@ -53,15 +53,22 @@ const newStrapLength = (strapArray) => {
     <button>Update</button>
     `;
     
+    lengthForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+    })
+//     const update = document.querySelector('button')
+// update.addEventListener('submit', (e) => {
+//   // newStrapLength(strapArray)
+//   e.preventDefault();
+// })
+
     // Add form to the end of the list element
     listElement.append(lengthForm);
   });
 };
 
-// const update = document.querySelector('button')
-// update.addEventListener('click', () => {
-//   newStrapLength(strapArray)
-// })
+
+
 
 const backpackList = backpackObjectArray.map((backpack) => {
   let backpackArticle = document.createElement("article");
